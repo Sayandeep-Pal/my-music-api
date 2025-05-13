@@ -36,13 +36,13 @@ app.get("/search", async (req, res) => {
           if(media.media_url === null){
             return null
           }
-          
+
           return {
             id: song.id,
             song: song.title,
             singers: song.singers || song.primaryArtists,
             image:
-              song.image.find((img) => img.quality === "500x500")?.url || "",
+              song.image.find((img) => img.quality === "150x150")?.url || "",
             media_url: media.media_url,
             perma_url: song.url,
             album: song.album,
