@@ -33,7 +33,10 @@ app.get("/search", async (req, res) => {
           }
 
           const media = await mediaRes.json();
-
+          if(media.media_url === null){
+            return null
+          }
+          
           return {
             id: song.id,
             song: song.title,
