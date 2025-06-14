@@ -2,9 +2,6 @@ const express = require("express");
 const app = express();
 const port = 3001;
 
-// Load `node-fetch` dynamically for compatibility
-// const fetch = (...args) =>
-//   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
