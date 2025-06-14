@@ -15,7 +15,7 @@ app.get("/search", async (req, res) => {
   const visitedQueries = new Set();
   const searchQueue = [query];
 
-  const maxResults = 5;
+  const maxResults = 10;
 
   while (searchQueue.length > 0 && collectedSongs.size < maxResults) {
     const currentQuery = searchQueue.shift();
